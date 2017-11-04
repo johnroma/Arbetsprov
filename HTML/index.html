@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Demo App - H&M evaluation</title>
-	<link rel="stylesheet" href="css/main.css">
-
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>H&M Arbetsprov</title>
+	<link rel="stylesheet" href="css/main.css" type="text/css">
 </head>
+
 <body>
 
+<header>
+	<img src="img/logo.svg" alt="SEARQ Logotype" class="logo">
+</header>
 
+<main>
+	<section class="search-zone">
+		<form id="searchform" action="index.html" method="get" autocomplete="off" required typeahead-editable="false" onSubmit="return false;">
+			<input id="searchbox" type="text" data-provide="typeahead">
+		</form>
+	</section>
 
-<form id="searchform" action="index.html" method="get" autocomplete="off" required typeahead-editable="false" onSubmit="return false;">
-	<input id="searchbox" type="text" data-provide="typeahead" >
-	<input type="submit" value="go">
-</form>
+	<section id="history" style="position:absolute; top:240px"></section>
+</main>
 
-
-
-<p style="position:absolute; top:140px" id="demo"></p>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.2.1/typeahead.bundle.min.js"></script>

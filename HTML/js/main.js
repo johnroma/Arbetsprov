@@ -17,7 +17,7 @@ function update_history()
 
 
 	console.log(formatted_list);
-	document.getElementById("demo").innerHTML = formatted_list;
+	document.getElementById("history").innerHTML = formatted_list;
 }
 
 //timeInMs = Date.now();

@@ -1,8 +1,8 @@
 body, html {
-	font:  14px "Tahoma", sans-serif ;
-
+	background-color: #002650;
+	color: #fff;
+	font:  14px "Tahoma", sans-serif;
 }
-
 
 input {
 	font:  inherit;
@@ -20,7 +20,6 @@ input[type="text"],
 
 .tt-input:focus { outline: none; }
 
-
 .tt-menu {
 	width:  220px;
 	border: 1px solid #ccc;
@@ -29,20 +28,11 @@ input[type="text"],
 }
 
 .tt-suggestion {
-	/* width:  200px; */
 	margin:  0px;
 	cursor: pointer;
-padding: 0 10px;
+	padding: 0 10px;
 }
 
 .tt-suggestion.tt-cursor { background-color: #ccc; padding: 0 10px;}
 
-
-input[type="submit"]{
-
-	background-color: gray; color: #eee;
-	height: 33px;
-	padding: 0px 10px;
-	vertical-align: bottom;
-}
 

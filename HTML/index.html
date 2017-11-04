@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo App - H&M evaluation</title>
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+
+
+<form id="searchform" action="index.html" method="get" autocomplete="off" required typeahead-editable="false" onSubmit="return false;">
+	<input id="searchbox" type="text" data-provide="typeahead" >
+	<input type="submit" value="go">
+</form>
+
+
+
+<p style="position:absolute; top:140px" id="demo"></p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.2.1/typeahead.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

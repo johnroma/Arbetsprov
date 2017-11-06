@@ -1,7 +1,31 @@
 
 var now_time;
 var search_history = [];
-var trash_btns;
+var draggers;
+
+
+function touchprep(myElement)
+{
+	// var myElement = document.getElementById('myElement');
+	var mc = new Hammer(myElement, {
+	inputClass: Hammer.SUPPORT_POINTER_EVENTS ? Hammer.PointerEventInput : Hammer.TouchInput
+	});
+	mc.on("panleft panright tap press", function(ev) {
+	if(ev.type == "panleft") console.log (ev.type);
+  
+ });
+}
+
+// create a simple instance
+// by default, it only adds horizontal recognizers
+
+
+// listen to events...
+
+
+function myFunction() {
+    console.log("fwef");
+}
 
 function update_history()
 {
@@ -17,7 +41,15 @@ function update_history()
 
 	 if (search_history.length >0){
 		document.getElementById("history").innerHTML = formatted_list;
-		document.getElementById("history").style.display = "block";	 
+		document.getElementById("history").style.display = "block";
+		
+		draggers = document.getElementById("history").children;
+		for (var i=0; i<draggers.length; i++)
+		{
+		
+		// console.log('drag'+draggers[0].style.opacity = 0.4);
+			touchprep(draggers[i]);
+		}
 	}
 	else
 		document.getElementById("history").style.display = "none";
@@ -34,6 +66,8 @@ function killer (n){
 	search_history.splice(n, 1);
 	update_history();
 }
+
+
 
 
 
@@ -105,7 +139,21 @@ $(document).ready(function()
 	  	update_history();
 	});
 
+
+
+
+
+
+
+
+
+
+
+
+
 	document.getElementById("search-zone").style.opacity = 1;
+
+
 	
 });
 

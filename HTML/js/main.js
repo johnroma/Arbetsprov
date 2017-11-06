@@ -16,7 +16,6 @@ function update_history()
 	}
 
 
-	console.log(formatted_list);
 	document.getElementById("history").innerHTML = formatted_list;
 }
 
@@ -64,7 +63,8 @@ $(document).ready(function()
   });
 
 	engine.initialize();
-
+	
+	
 	$('#searchbox').typeahead(
 	{
 		hint: true,
@@ -89,7 +89,8 @@ $(document).ready(function()
 	  	update_history();
 	});
 
-
+	document.getElementById("search-zone").style.opacity = 1;
+	
 });
 
 

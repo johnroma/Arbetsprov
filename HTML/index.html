@@ -14,9 +14,12 @@
 </header>
 
 <main>
-	<section class="search-zone">
+	<section id="search-zone">
 		<form id="searchform" action="index.html" method="get" autocomplete="off" required typeahead-editable="false" onSubmit="return false;">
-			<input id="searchbox" type="text" data-provide="typeahead">
+			<div>
+				<input id="searchbox" name="searchbox" type="text" data-provide="typeahead" placeholder="Look for a POI in Sweden" required >
+				<img id="zoomicon" src="search.svg">
+			</div>	
 		</form>
 	</section>
 

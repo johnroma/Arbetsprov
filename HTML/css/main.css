@@ -4,21 +4,45 @@ body, html {
 	font:  14px "Tahoma", sans-serif;
 }
 
-input {
-	font:  inherit;
-	border:  1px solid #ccc;
+#searchform > div  {
+  position: relative;
+}
+#searchform >div .zoomicon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
 }
 
-input[type="text"],
+
+
+#searchform input {
+	outline: none; 
+	font:  inherit;
+	border:  1px solid #ccc;
+		height: 20px;
+	padding: 5px 10px;
+	width: 200px;
+}
+
+::-webkit-input-placeholder {
+   color: blue;
+}
+
+.tt-hint {
+  color: red;
+}
+
 .tt-input{
 	width:  200px;
-	background-color: #ffe;
+	/*background-color: #ffe;*/
 	height: 20px;
 	padding: 5px 10px;
 }
 
 
-.tt-input:focus { outline: none; }
+.tt-input:focus { 	}
 
 .tt-menu {
 	width:  220px;

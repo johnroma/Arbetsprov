@@ -52,7 +52,7 @@ body {
 }
 
 #history  a > span:first-child  {
-	width: 50%;
+	width: calc(100% - 115px);
 	min-width: 180px;
 	display: inline-block;
 }

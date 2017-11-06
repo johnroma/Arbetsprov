@@ -21,7 +21,7 @@ body, html {
 #history {
     /* border: 1px solid; */
     width: 100%;
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 20px 0;
 	background-color: rgba(255, 255, 255, 0.1);
 	display:  none;
@@ -39,7 +39,11 @@ body, html {
 @media (hover:hover){
 	#history a:first-child:hover  { background-color: rgba(255, 255, 255, 0.1); }
 	#history a:first-child:hover + .del-history, .del-history:hover { opacity:1; background: #793d55;  }
-	.del-history:hover  { opacity:1 ; background: pink; cursor:pointer; }	
+	.del-history:hover  { opacity:1 ; background: #790030; cursor:pointer; }	
+}
+
+@media (hover:none), (hover:on-demand){
+	.del-history  { opacity:1 ; background: #793d55;  }
 }
 
 #history  a > span:first-child  {

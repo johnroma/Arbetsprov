@@ -6,31 +6,31 @@ var draggers;
 
 function touchprep(myElement)
 {
-	// var myElement = document.getElementById('myElement');
 	var mc = new Hammer(myElement, {
 	inputClass: Hammer.SUPPORT_POINTER_EVENTS ? Hammer.PointerEventInput : Hammer.TouchInput
 	});
 	mc.on("panleft panright tap press", function(ev) {
-	if(ev.type == "panleft") console.log (ev.type);
+	if(ev.type == "tap" || ev.type == "panleft")
+	{
+		console.log (ev.type + "-"+ myElement.children[1]);
+		myElement.children[0].style.background = "rgba(255, 255, 255, 0.2)";
+		myElement.children[1].style.opacity = 1;
+	}
+	else if(ev.type == "panright")
+	{
+		myElement.children[0].style.background = "rgba(255, 255, 255, 0)";
+		myElement.children[1].style.opacity = 0;
+	}
+
   
  });
 }
 
-// create a simple instance
-// by default, it only adds horizontal recognizers
-
-
-// listen to events...
-
-
-function myFunction() {
-    console.log("fwef");
-}
 
 function update_history()
 {
 
-	var formatted_list;// = "<div>" +  search_history[0].txt +" - "+ search_history[0].tim +"</div>";
+	var formatted_list;
 	for (var i=0; i<search_history.length; i++)
 	{
 		 search_history[i].listid = i;
@@ -46,8 +46,6 @@ function update_history()
 		draggers = document.getElementById("history").children;
 		for (var i=0; i<draggers.length; i++)
 		{
-		
-		// console.log('drag'+draggers[0].style.opacity = 0.4);
 			touchprep(draggers[i]);
 		}
 	}

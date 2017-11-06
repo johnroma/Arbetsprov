@@ -2,12 +2,22 @@ body, html {
 	margin: 0;
 	background-color: #002650;
 	color: #fff;
-	font:  14px Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font:  18px Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.logo {
+	display: block;
+	position:  relative;
+	margin: 64px auto;
+ }
+
+#search-zone {
+	padding: 0 40px;
 }
 
 #searchform > div  {
   position: relative;
-  max-width: 500px;
+  /* max-width: 500px; */
   margin: 0 auto;
 }
 #searchform >div > img {
@@ -23,17 +33,25 @@ body, html {
 	outline: none; 
 	font:  inherit;
 	border:  0px;
-	height: 20px;
+	height: 24px;
 	padding: 15px 10px;
 	padding-left: 40px;
-	width: 90%;
+	width: 85%;
 	border-radius: 4px;
 }
 
-::-webkit-input-placeholder {
+::-webkit-input-placeholder,::-moz-placeholder {
    color: #fff;
 }
 
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #fff;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #fff;
+	opacity: 1;
+}
 .twitter-typeahead{
      width: 100%;
 }
@@ -43,10 +61,10 @@ body, html {
 }
 
 .tt-input{
-	width:  90%;
+	width: 85%;
 	color: #fff;
 	/*background-color: #ffe;*/
-	height: 20px;
+	height: 24px;
 	padding: 5px 10px;
 }
 

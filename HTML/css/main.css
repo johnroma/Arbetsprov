@@ -36,7 +36,7 @@ body, html {
 
 
 #history  a > span:first-child  {
-	width: 120px;
+	width: 200px;
 	display: inline-block;
 }
 
@@ -44,7 +44,7 @@ body, html {
 
 
 #history a:first-child:hover + .del-history, .del-history:hover { opacity:1; background: green;  }
-.del-history:hover  { opacity:1 ; background: pink;  }
+.del-history:hover  { opacity:1 ; background: pink; cursor:pointer; }
 
 
 

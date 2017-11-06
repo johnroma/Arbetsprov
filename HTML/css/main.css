@@ -1,10 +1,18 @@
-body, html {
+html {
+  height: 100%;
+}
+body {
 	margin: 0;
 	background-color: #002650;
+
+	background: #002650;
+	background: -moz-linear-gradient(top, #002650 0%, #3b57a7 100%);
+	background: -webkit-linear-gradient(top, #002650 0%,#3b57a7 100%);
+	background: linear-gradient(to bottom, #002650 0%,#3b57a7 100%);
+
 	color: #fff;
 	font:  18px Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-
 
 
 .logo {
@@ -78,7 +86,7 @@ body, html {
 
 #searchform > div  {
   position: relative;
-  /* max-width: 500px; */
+  max-width: 500px;
   margin: 0 auto;
 }
 #searchform >div > img {

@@ -15,8 +15,12 @@ function update_history()
 			formatted_list += stylelist_item(i);
 	}
 
-	document.getElementById("history").innerHTML = (search_history.length >0)? formatted_list:'';
-	 
+	 if (search_history.length >0){
+		document.getElementById("history").innerHTML = formatted_list;
+		document.getElementById("history").style.display = "block";	 
+	}
+	else
+		document.getElementById("history").style.display = "none";
 }
 
 

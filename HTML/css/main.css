@@ -17,6 +17,7 @@ body, html {
     width: 100%;
     margin-top: 20px;
     padding: 20px 0;
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
 #history > div { position: relative; }	 
@@ -25,13 +26,11 @@ body, html {
 	display: block;
 	color: #fff;
 	text-decoration: none;
-	background: red;
-	border: 1px solid green;
-	/* float: left; */
+	/* background-color: rgba(255, 255, 255, 0.2); */
 }
 
 #history a:first-child:hover  {
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
 
@@ -43,7 +42,7 @@ body, html {
 #history  a > span+span { font-size: 12px;  } 
 
 
-#history a:first-child:hover + .del-history, .del-history:hover { opacity:1; background: green;  }
+#history a:first-child:hover + .del-history, .del-history:hover { opacity:1; background: #793d55;  }
 .del-history:hover  { opacity:1 ; background: pink; cursor:pointer; }
 
 
@@ -53,12 +52,19 @@ body, html {
 	top: 0; right: 0;
 	height: 100%;
     width: 40px;
-    background: yellow;
     position: absolute;
     opacity: 0;
 
 }
-
+.del-history img
+{ 
+    position: absolute;
+    width: 20px;
+    margin-top: -10px;
+    margin-left: -10px;    
+    left: 50%;
+    top: 50%;
+}
 
 #search-zone {
 	padding: 0 40px;
@@ -124,7 +130,7 @@ input#searchbox.tt-input  {
 	width:  calc(100% - 48px);
 }
 
-
+.tt-input:focus { background-color: rgba(255, 255, 255, 0.55) !important; }
 .tt-menu {
 	width:  100%;
 	border: 0;

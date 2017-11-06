@@ -1,53 +1,62 @@
 body, html {
+	margin: 0;
 	background-color: #002650;
 	color: #fff;
-	font:  14px "Tahoma", sans-serif;
+	font:  14px Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 #searchform > div  {
   position: relative;
+  max-width: 500px;
+  margin: 0 auto;
 }
-#searchform >div .zoomicon {
+#searchform >div > img {
   position: absolute;
-  top: 0;
+  top: 10px;
   bottom: 0;
-  left: 0;
-
+  left: 4px;
+  width: 30px;
 }
-
-
 
 #searchform input {
+	background-color: rgba(255, 255, 255, 0.3);
 	outline: none; 
 	font:  inherit;
-	border:  1px solid #ccc;
-		height: 20px;
-	padding: 5px 10px;
-	width: 200px;
+	border:  0px;
+	height: 20px;
+	padding: 15px 10px;
+	padding-left: 40px;
+	width: 90%;
+	border-radius: 4px;
 }
 
 ::-webkit-input-placeholder {
-   color: blue;
+   color: #fff;
 }
 
+.twitter-typeahead{
+     width: 100%;
+}
 .tt-hint {
-  color: red;
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 0.4;
 }
 
 .tt-input{
-	width:  200px;
+	width:  90%;
+	color: #fff;
 	/*background-color: #ffe;*/
 	height: 20px;
 	padding: 5px 10px;
 }
 
 
-.tt-input:focus { 	}
-
 .tt-menu {
-	width:  220px;
-	border: 1px solid #ccc;
+	width:  100%;
+	border: 0;
 	border-top: 0;
+	background: white;
+	color: black;
 	
 }
 

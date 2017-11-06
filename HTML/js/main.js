@@ -1,25 +1,47 @@
 
 var now_time;
 var search_history = [];
+var trash_btns;
 
 function update_history()
 {
-	
-	
-	var formatted_list = search_history[0].txt +" - "+ search_history[0].tim +"<br>";
-	for (var i=1; i<search_history.length; i++)
+	var formatted_list;// = "<div>" +  search_history[0].txt +" - "+ search_history[0].tim +"</div>";
+	for (var i=0; i<search_history.length; i++)
 	{
-
-		 formatted_list += search_history[i].txt +" - "+ search_history[1].tim +"<br>";
-
-		
+		 search_history[i].listid = i;
+		 if(i==0) formatted_list = stylelist_item(i);
+		 else
+			formatted_list += stylelist_item(i);
 	}
-
 
 	document.getElementById("history").innerHTML = formatted_list;
 }
 
-//timeInMs = Date.now();
+
+function stylelist_item(i)
+{
+	var str =
+	"<div>" + search_history[i].txt +" - "+ search_history[i].tim +
+		 				"<button onclick='tster("+search_history[i].listid+")'>del</button></div>";
+	return str;
+}
+
+function tster (n){
+	console.log(n);
+	search_history.splice(n, 1);
+	update_history();
+
+}
+
+   
+trash_btns = document.getElementsByClassName("del-history");
+
+trash_btns[0].onclick = function() {myFunction()};
+
+function myFunction() {
+    console.log("fwef");
+}
+
 
 now_time = timestamp_to_date(Date.now())
 function timestamp_to_date(timeInMs)
@@ -85,7 +107,7 @@ $(document).ready(function()
 	  $('#searchbox').typeahead('val', '');
 
 		now_time = timestamp_to_date(Date.now());
-		search_history.unshift({txt:selection.poi.name, tim:now_time});
+		search_history.unshift({txt:selection.poi.name, tim:now_time, listid:0});
 	  	update_history();
 	});
 
@@ -93,14 +115,3 @@ $(document).ready(function()
 	
 });
 
-
-/*
-$('.typeahead').on('keydown', function(e) {
-  if (e.keyCode == 13) {
-    var ta = $(this).data('typeahead');
-    var val = ta.$menu.find('.active').data('value');
-    if (!val)
-      $('#your-form').submit();
-  }
-}
-*/

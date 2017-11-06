@@ -11,6 +11,55 @@ body, html {
 	margin: 64px auto;
  }
 
+
+#history {
+    /* border: 1px solid; */
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+#history > div { position: relative; }	 
+#history a:first-child{
+	padding: 17px 60px;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	background: red;
+	border: 1px solid green;
+	/* float: left; */
+}
+
+#history a:first-child:hover  {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+#history  a > span:first-child  {
+	width: 120px;
+	display: inline-block;
+}
+
+#history  a > span+span { font-size: 12px;  } 
+
+
+#history a:first-child:hover + .del-history, .del-history:hover { opacity:1; background: green;  }
+.del-history:hover  { opacity:1 ; background: pink;  }
+
+
+
+.del-history
+{ 
+	top: 0; right: 0;
+	height: 100%;
+    width: 40px;
+    background: yellow;
+    position: absolute;
+    opacity: 0;
+
+}
+
+
 #search-zone {
 	padding: 0 40px;
 	opacity: 0;

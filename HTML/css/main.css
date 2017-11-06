@@ -7,10 +7,6 @@ body, html {
 
 
 
-
-
-
-
 .logo {
 	display: block;
 	position:  relative;
@@ -48,18 +44,19 @@ body, html {
 }
 
 #history  a > span:first-child  {
-	width: 200px;
+	width: 50%;
+	min-width: 180px;
 	display: inline-block;
 }
 
-#history  a > span+span { font-size: 12px;  } 
+#history  a > span+span { font-size: 12px; margin-left: 15px;  } 
 
 
 .del-history
 { 
 	top: 0; right: 0;
 	height: 100%;
-    width: 40px;
+    width: 50px;
     position: absolute;
     opacity: 0;
 }

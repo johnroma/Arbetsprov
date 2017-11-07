@@ -1,21 +1,10 @@
-Instructions
-* Fork the repository
-* Create a Feature Branch
-* Implement a simple search function according to wireframes and UI (attached on github)
-* The search should use a public REST API of your choice using JavaScript
-* Search for title, return title (or something like that)
-* Display partial search results in a list beneath the search field
-* When hitting [ENTER] the selected search value should be saved with date/timestamp beneath the search box (as a search history)
-* The page should be responsive, so that if width of window is changed it should adapt
-* Nothing needs to be saved if the page is reloaded (i.e don’t have to use cookies/database etc)
-* Logo and search-icon is provided under /assets
-* We expect a total of 3 files - .html, .js and .css
-* Solutions built using frameworks such as flex-grid, bootstrap or similar will be discarded.
- 
-What we look at
-* HTML5 semantics, complexity of css3 solutions and js sanity.
-* General sanity check on structure and solution
- 
-Solve the task as far as you think is necessary.
- 
-When done push your branch and let us know it’s done, e.g. by a pull request.
+# Simple search application implementation of John Romani
+
+##API
+I choose to implement with [Tomtom's POI online search](https://developer.tomtom.com/online-search/online-search-documentation-search/points-interest-search).
+
+##Comments and solutions to unclear instructions
+* In UI there seemed to be a delete step, but not accordning to the UX. I followed the UI.
+* Graphics for delete button was missing under /assets. I improvised a similar one to the one in reference screen.png
+* No specific design for Desktop and Tablets was given, improvised responsive solution.
+* Didn't find SVG-logo found in /assets stable enough in all browsers. Converted in to PNG

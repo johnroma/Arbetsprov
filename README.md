@@ -8,3 +8,8 @@ I choose to implement with [Tomtom's POI online search](https://developer.tomtom
 * Graphics for delete button was missing under /assets. I improvised a similar one to the one in reference screen.png
 * No specific design for Desktop and Tablets was given, improvised responsive solution.
 * Didn't find SVG-logo found in /assets stable enough in all browsers. Converted in to PNG
+
+## How to delete items from history
+* On touch device, swipe left first to show delete button, then touch it.
+Swipe right to cancel.
+* On Desktop, hover then click on button.

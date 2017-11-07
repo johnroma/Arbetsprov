@@ -2,7 +2,9 @@
 var now_time;
 var search_history = [];
 var draggers;
-var listn4kill = false;
+var listn4kill = true;
+
+
 
 function touchprep(myElement)
 {
@@ -26,8 +28,6 @@ function touchprep(myElement)
 		myElement.children[1].style.display = "none";
 		listn4kill = false;
 	}
-
-  
  });
 }
 
@@ -113,7 +113,6 @@ $(document).ready(function()
 			url: 'https://api.tomtom.com/search/2/poiSearch/%QUERY.json?key=8z5FWBplukACbwhkk7Pi8FAdQaViLmij&countrySet=SE&typeahead=true',
 			wildcard: '%QUERY',             
 			
-			//url: "http://vocab.nic.in/rest.php/country/json",
 			filter: function(response) { return response.results; }
 		}
   });
@@ -146,17 +145,11 @@ $(document).ready(function()
 	});
 
 
-
-
-
-
-
-
-
-
-
-
-
+//In order to detect if user is on touch or Desktop-device, listen to first interaction with input field.. and..
+	document.getElementById("searchbox").addEventListener("touchstart", handleStart, false);
+	function handleStart(evt) { listn4kill = false; }
+// if on touch device, set start using listn4kill in order to prevent accidental history deletions
+	
 	document.getElementById("search-zone").style.opacity = 1;
 
 

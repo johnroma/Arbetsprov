@@ -9,49 +9,28 @@
 
 <body>
 
-<header>
-	<img src="img/logo@2x.png" alt="SEARQ Logotype" class="logo">
-</header>
+	<header>
+		<img src="img/logo@2x.png" alt="SEARQ Logotype" class="logo">
+	</header>
 
-<main>
-	<section id="search-zone">
-		<form id="searchform" action="index.html" method="get" autocomplete="off" required typeahead-editable="false" onSubmit="return false;">
-			<div>
-				<input id="searchbox" name="searchbox" type="text" data-provide="typeahead" placeholder="Type in a POI in Sweden" required >
-				<img src="img/search.svg">
-			</div>	
-		</form>
-	</section>
+	<main>
+		<section id="search-zone">
+			<form id="searchform" action="index.html" method="get" autocomplete="off" required typeahead-editable="false" onSubmit="return false;">
+				<div>
+					<input id="searchbox" name="searchbox" type="text" data-provide="typeahead" placeholder="Type in a POI in Sweden" required>
+					<img src="img/search.svg">
+				</div>	
+			</form>
+		</section>
 
-	<section id="history">
- 		
-	</section>
-
-
-<!-- <div id="myElement" style="width:100%; background:green">	
-			<a href="#">
-				<span>Hamsters</span>
-				<span>2017-11-07 15:29</span>
-
-			</a>
-			<a class="del-history" href="#">
-			<img src="img/search.svg"></a>
-		</div>
-		<div>
-			<a href=#>
-				<span>Cats</span>
-				<span>2017-11-07 15:29</span>
-			</a>
-			<a href="#" class="del-history"  >
-			<img src="img/search.svg"></a>
-</div> -->
-</main>
+		<section id="history"></section>
+	</main>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.2.1/typeahead.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.2.1/typeahead.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+	<script src="js/main.js"></script>
 
-<script src="js/main.js"></script>
 </body>
 </html>

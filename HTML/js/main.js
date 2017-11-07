@@ -2,7 +2,7 @@
 var now_time;
 var search_history = [];
 var draggers;
-
+var listn4kill = false;
 
 function touchprep(myElement)
 {
@@ -10,16 +10,21 @@ function touchprep(myElement)
 	inputClass: Hammer.SUPPORT_POINTER_EVENTS ? Hammer.PointerEventInput : Hammer.TouchInput
 	});
 	mc.on("panleft panright tap press", function(ev) {
-	if(ev.type == "tap" || ev.type == "panleft")
+	if(ev.type == "tap")
 	{
-		console.log (ev.type + "-"+ myElement.children[1]);
 		myElement.children[0].style.background = "rgba(255, 255, 255, 0.2)";
-		myElement.children[1].style.opacity = 1;
+	}
+	else if(ev.type == "panleft")
+	{
+		myElement.children[0].style.background = "rgba(255, 255, 255, 0.2)";
+		myElement.children[1].style.display = "block";
+		listn4kill = true;
 	}
 	else if(ev.type == "panright")
 	{
 		myElement.children[0].style.background = "rgba(255, 255, 255, 0)";
-		myElement.children[1].style.opacity = 0;
+		myElement.children[1].style.display = "none";
+		listn4kill = false;
 	}
 
   
@@ -61,8 +66,11 @@ function stylelist_item(i)
 }
 
 function killer (n){
-	search_history.splice(n, 1);
-	update_history();
+	if (listn4kill)
+	{
+		search_history.splice(n, 1);
+		update_history();
+	}
 }
 
 

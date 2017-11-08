@@ -98,6 +98,8 @@ function timestamp_to_date(timeInMs) {
 
 
 $(document).ready(function() {
+	//Using typeahead.js for both API-calls and auto-completing UI
+
 	var engine = new Bloodhound({
 		datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.value); },
 		queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -116,32 +118,32 @@ $(document).ready(function() {
 	$('#searchbox').typeahead({
 		hint: true,
 		highlight: true,
-		minLength: 1
+		minLength: 2
 	}, {
 		name: 'name',
-		displayKey: function(ret) {
-			return ret.poi.name;
-		},
+		displayKey: function(ret) { return ret.poi.name; },
 		source: engine.ttAdapter()
 	});
 
 
-	$('#searchbox').on('typeahead:select', function(event, selection) {
+	$('#searchbox').on('typeahead:select', onSelected);
 
+
+	function onSelected($str,datum)
+	{
 		$('#searchbox').typeahead('val', '');
 
-
-		now_time = timestamp_to_date(ConvertUTCTimeToLocalTime(Date.now()));
-		search_history.unshift({ txt: selection.poi.name, tim: now_time, listid: 0 });
+		now_time = timestamp_to_date(ConvertUTCTimeToLocalTime($str.timeStamp));
+		search_history.unshift({ txt: datum.poi.name, tim: now_time, listid: 0 });
 		update_history();
-	});
-
+	}
 
 	//In order to detect if user is on touch or Desktop-device, listen to first interaction with input field.. and..
 	document.getElementById("searchbox").addEventListener("touchstart", handleStart, false);
 
-	function handleStart(evt) { listn4kill = false; }
 	// if on touch device, set start using listn4kill in order to prevent accidental history deletions
+	function handleStart(evt) { listn4kill = false; }
+	
 
 
 	//show search input box when everything i ready

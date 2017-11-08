@@ -40,12 +40,12 @@ body
 	background-color: rgba(255, 255, 255, .1);
 }
 
-#history > div
+#history > article
 {
 	position: relative;
 }
 
-#history a:first-child
+#history a
 {
 	display: block;
 
@@ -58,11 +58,11 @@ body
 
 @media (hover:hover)
 {
-	#history a:first-child:hover
+	#history a:hover
 	{
 		background-color: rgba(255, 255, 255, .1);
 	}
-	#history a:first-child:hover + .del-history, .del-history:hover
+	#history a:hover + .del-history, .del-history:hover
 	{
 		display: block;
 		background: #793d55;
@@ -85,15 +85,17 @@ body
 	}
 }
 
-#history a > span:first-child
+#history h4
 {
+	font-weight: normal;	
 	display: inline-block;
 
 	width: calc(100% - 115px);
 	min-width: 180px;
+	margin: 0;
 }
 
-#history a > span + span
+#history time
 {
 	font-size: 12px;
 
@@ -110,7 +112,7 @@ body
 	height: 100%;
 
 	display: none;
-	/* opacity: 0; */
+	border: 0;
 }
 
 .del-history img

@@ -50,7 +50,7 @@ function update_history() {
 
 
 function stylelist_item(i) {
-	var str = "<div><a><span>" + search_history[i].txt + "</span><span>" + search_history[i].tim + "</span></a><a class='del-history' onclick='killer(" + search_history[i].listid + ")'><img src='img/delete.svg'></a></div>"
+	var str = "<article><a><h4>" + search_history[i].txt + "</h4><time datetime='"+search_history[i].tim+"'>" + search_history[i].tim + "</time></a><button class='del-history' onclick='killer(" + search_history[i].listid + ")'><img src='img/delete.svg'></button></article>"
 	return str;
 }
 
